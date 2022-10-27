@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIM.WebForms", "PIM.WebForms\PIM.WebForms.csproj", "{214110C9-E822-4107-B80A-E40389F65AC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{214110C9-E822-4107-B80A-E40389F65AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214110C9-E822-4107-B80A-E40389F65AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214110C9-E822-4107-B80A-E40389F65AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214110C9-E822-4107-B80A-E40389F65AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B2B0569-0459-4279-B7C5-F694BE6728A1}
+	EndGlobalSection
+EndGlobal

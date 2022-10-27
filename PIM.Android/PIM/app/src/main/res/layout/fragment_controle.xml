@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".crud.ControleFragment"
+    android:id="@+id/layoutControle">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_id"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o id"
+            android:inputType="textCapSentences" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_deletar"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_500"
+        android:backgroundTint="@color/purple_500"
+        android:text="Deletar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/input_layout_id"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/containerdeletar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="10dp"
+        android:background="@color/purple_500"
+        android:backgroundTint="@color/purple_500"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/input_layout_id"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_id"
+        app:layout_constraintEnd_toEndOf="@id/button_deletar"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/text_pessoa"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Dados pessoa"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/containerdeletar"
+        app:layout_constraintTop_toBottomOf="@id/containerdeletar"
+        app:layout_constraintEnd_toEndOf="@id/containerdeletar"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_cpf"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="#E1E1E1"
+        app:layout_constraintTop_toBottomOf="@id/text_pessoa"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_cpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:background="#E1E1E1"
+            android:hint="Digite o cpf"
+            android:inputType="number"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_nome"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:background="#E1E1E1"
+        app:layout_constraintStart_toEndOf="@id/input_layout_cpf"
+        app:layout_constraintTop_toBottomOf="@id/text_pessoa">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:background="#E1E1E1"
+            android:hint="Digite o nome"
+            android:inputType="text"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_ddd"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="#E1E1E1"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_cpf"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_ddd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:background="#E1E1E1"
+            android:gravity="center"
+            android:hint="DDD"
+            android:inputType="number"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_telefone"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:background="#E1E1E1"
+        app:layout_constraintStart_toEndOf="@id/input_layout_ddd"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_cpf">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_telefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E1E1E1"
+            android:backgroundTint="#00FFFFFF"
+            android:hint="Digite o telefone"
+            android:inputType="number"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_tipo"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:background="#E1E1E1"
+        app:layout_constraintStart_toEndOf="@id/input_layout_telefone"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_cpf">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_tipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E1E1E1"
+            android:hint="Digite o tipo"
+            android:backgroundTint="#00FFFFFF"
+            android:inputType="text"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_endereco"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Dados endereço"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_ddd"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_logradouro"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="#E1E1E1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_endereco">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_logradouro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:background="#E1E1E1"
+            android:hint="Digite o logradouro"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_numero"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="#E1E1E1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_logradouro">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_numero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E1E1E1"
+            android:backgroundTint="#00FFFFFF"
+            android:hint="Numero"
+            android:inputType="number" />
+</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_bairro"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="#E1E1E1"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@id/input_layout_numero"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_logradouro">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_bairro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E1E1E1"
+            android:backgroundTint="#00FFFFFF"
+            android:hint="Digite o bairro"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_cidade"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="#E1E1E1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_numero">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_cidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E1E1E1"
+            android:backgroundTint="#00FFFFFF"
+            android:hint="Digite a cidade"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_estado"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="#E1E1E1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_cidade">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E1E1E1"
+            android:hint="Digite a estado"
+            android:backgroundTint="#00FFFFFF"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_cep"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="#E1E1E1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_estado">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_cep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E1E1E1"
+            android:backgroundTint="#00FFFFFF"
+            android:hint="Digite o cep"
+            android:inputType="number"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_inserir"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/purple_500"
+        android:backgroundTint="@color/purple_500"
+        android:text="Inserir"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_cep" />
+
+    <Button
+        android:id="@+id/button_atualizar"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/purple_500"
+        android:backgroundTint="@color/purple_500"
+        android:text="Atualizar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/button_inserir"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_cep" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

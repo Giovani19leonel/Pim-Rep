@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".crud.ConsultarFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_cpf_consultar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_cpf_consultar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o CPF"
+            android:inputType="textCapSentences" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_consultar_cpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_500"
+        android:backgroundTint="@color/purple_500"
+        android:text="Consultar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/input_layout_cpf_consultar"
+        app:layout_constraintStart_toStartOf="@id/input_layout_cpf_consultar"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_cpf_consultar" />
+
+    <TextView
+        android:id="@+id/dados_consulta"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Dados da consulta"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/button_consultar_cpf"
+        app:layout_constraintTop_toBottomOf="@id/button_consultar_cpf"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_id"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:text="Id:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/dados_consulta"
+        app:layout_constraintTop_toBottomOf="@id/dados_consulta"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/value_id"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:text="01234"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/text_id"
+        app:layout_constraintTop_toBottomOf="@id/dados_consulta"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_cpf"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="45dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="cpf:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/text_id"
+        app:layout_constraintTop_toBottomOf="@id/text_id"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/value_cpf"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="12345678912"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/text_cpf"
+        app:layout_constraintTop_toBottomOf="@id/value_id"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_nome"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="nome:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/text_cpf"
+        app:layout_constraintTop_toBottomOf="@id/text_cpf"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/value_nome"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="nome correspondente"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/text_nome"
+        app:layout_constraintTop_toBottomOf="@id/text_cpf"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_telefone"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="telefone:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/text_nome"
+        app:layout_constraintTop_toBottomOf="@id/text_nome"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/value_telefone"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="(012) 1234 - 5678"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/text_telefone"
+        app:layout_constraintTop_toBottomOf="@id/text_nome"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_tipo"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="tipo:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/text_telefone"
+        app:layout_constraintTop_toBottomOf="@id/text_telefone"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/value_tipo"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="fixo - movel"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/text_tipo"
+        app:layout_constraintTop_toBottomOf="@id/text_telefone"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_logradouro"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="logradouro:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/text_tipo"
+        app:layout_constraintTop_toBottomOf="@id/text_tipo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/value_logradouro"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="rua exemplo"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/text_logradouro"
+        app:layout_constraintTop_toBottomOf="@id/text_tipo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_numero"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="numero:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/text_logradouro"
+        app:layout_constraintTop_toBottomOf="@id/text_logradouro"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/value_numero"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="1234"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/text_numero"
+        app:layout_constraintTop_toBottomOf="@id/text_logradouro"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_bairro"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="bairro:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/text_numero"
+        app:layout_constraintTop_toBottomOf="@id/text_numero"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/value_bairro"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="bairro exemplo"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/text_bairro"
+        app:layout_constraintTop_toBottomOf="@id/text_numero"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_cidade"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="cidade:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/text_bairro"
+        app:layout_constraintTop_toBottomOf="@id/text_bairro"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/value_cidade"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="cidade exemplo"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/text_cidade"
+        app:layout_constraintTop_toBottomOf="@id/text_bairro"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_estado"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="estado:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/text_cidade"
+        app:layout_constraintTop_toBottomOf="@id/text_cidade"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/value_estado"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="estado exemplo"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/text_estado"
+        app:layout_constraintTop_toBottomOf="@id/text_cidade"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_cep"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="cep:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/text_estado"
+        app:layout_constraintTop_toBottomOf="@id/text_estado"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/value_cep"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="123456789"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/text_cep"
+        app:layout_constraintTop_toBottomOf="@id/text_estado"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_navegar"
+        android:layout_width="98dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="28dp"
+        android:background="@color/purple_500"
+        android:backgroundTint="@color/purple_500"
+        android:onClick="NavigatorBotao"
+        android:text="Config"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/value_cep"
+        app:layout_constraintTop_toBottomOf="@+id/value_estado"
+        app:layout_constraintVertical_bias="0.113"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

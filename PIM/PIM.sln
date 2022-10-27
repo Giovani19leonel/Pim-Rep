@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PIM.Api", "PIM.Api\PIM.Api.csproj", "{ABB2D19E-BF18-48AF-B41B-E3E2A9F84E7F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D834EA59-163B-4BF2-B227-AE7BC29F5ACA} = {D834EA59-163B-4BF2-B227-AE7BC29F5ACA}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extension", "Extension\Extension.csproj", "{D834EA59-163B-4BF2-B227-AE7BC29F5ACA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABB2D19E-BF18-48AF-B41B-E3E2A9F84E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB2D19E-BF18-48AF-B41B-E3E2A9F84E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB2D19E-BF18-48AF-B41B-E3E2A9F84E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB2D19E-BF18-48AF-B41B-E3E2A9F84E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D834EA59-163B-4BF2-B227-AE7BC29F5ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D834EA59-163B-4BF2-B227-AE7BC29F5ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D834EA59-163B-4BF2-B227-AE7BC29F5ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D834EA59-163B-4BF2-B227-AE7BC29F5ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65EFFB6D-2B96-4F57-A3EF-BC6D80446DC4}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Header.master.cs" Inherits="PIM.WebForms.WebPages.Header" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <link type="text/css" rel="stylesheet" href="~/Content/resetCss.css" media="all">
+    <title>PIM</title>
+    <style type="text/css">
+        #Button1 {
+        }
+
+        #Button2 {
+            height: 52px;
+            width: 208px;
+        }
+
+        .links{
+            text-decoration: none;
+            color: white;
+            font-size:24px;
+        }
+        .line{
+            display:flex; 
+            margin-top:35px;
+        }
+        .botoescrud{
+             height: 35px;
+            background-color: #5F5F5F;
+            color: white;
+            width: 150px;
+            border: 0;
+            border-radius: 5px;
+         }
+        .linha {
+                clear: both;
+                min-width: 320px;
+                max-width: 65em;
+                position: relative;
+                right: 0px;
+                left: 0px;
+                margin: auto;
+                margin-top:50px;
+            }
+        .dropInput {
+            width: 68%;
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 30px;
+        }
+
+            .coluna {
+                float: left;
+            }
+
+            .coluna label,
+            .coluna input {
+                width: 65%;
+                font-size: 26px; 
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 30px;
+            }
+
+            .coluna label:after {
+                content: ':'
+            }
+@media only screen {
+    .pequeno-12 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 40em) {
+    .coluna label {
+        float: right;
+        text-align: right;
+        margin-top: 32px;
+        margin-right: 5px;
+    }
+    
+    .mediano-4 {
+        width: 33.33333%;
+    }
+
+    .mediano-8 {
+        width: 66.66667%;
+    } 
+}
+
+@media only screen and (min-width: 65em) {
+    .grande-2 {
+        width: 16.66667%;
+    }
+
+    .grande-4 {
+        width: 33.33333%;
+    } 
+}
+    </style>
+        <div style="height: 54px; background-color: #5F5F5F;">
+            <ul class="nav navbar-nav" style="list-style: none; display: flex;align-items: center;height: 100%;">
+                <li style="margin-left: 20px;margin-right: 30px;">
+                    <a runat="server" class="links" href="~/WebPages/Lista">Listar usuários</a>
+                </li>
+                <li><a runat="server" class="links" href="~/WebPages/Editar">Editar</a>
+                </li>
+            </ul>
+        </div>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+</head>
+<body>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+</body>
+</html>
